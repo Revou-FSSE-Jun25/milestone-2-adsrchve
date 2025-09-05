@@ -1,0 +1,283 @@
+/* Universal Style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: beige;
+    color: black;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: beige;
+    color: #222;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 30px;
+    color: #986ead;
+    font-weight: 600;
+}
+
+/* Navigation Bar */
+nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-align: right;
+    font-weight: 600;
+    color: #1C7CCC;
+    border: 1px solid transparent;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: purple;
+}
+
+/* Homepage */
+#home {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #22223b;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.25rem;
+    color: darkgrey;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    padding: 0 1rem;
+}
+
+.game-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(34,34,59,0.08);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(34,34,59,0.12);
+}
+
+/* Rock Paper Scissors Game */
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    font-size: 4rem;
+    z-index: 2;
+}
+
+.score {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+}
+
+.p-count, .c-count {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.options {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.rock, .paper, .scissors {
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: green;
+    outline: none;
+    border-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.move {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+
+/* Memory Card Game */
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+/* Number Guessing Game
+.guess-span {
+    padding: 0.5rem 1rem;
+    background-color: beige;
+    color: gray;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+.feedback-success {
+    background-color: limegreen;
+    color: green;
+}
+.feedback-error {
+    background-color: pink;
+    color: red;
+}
+.feedback-high {
+    background-color: yellowgreen;
+    color: yellow;
+}
+.feedback-low, .feedback-info {
+    background-color: lightblue;
+    color: blue;
+}
+.hidden {
+    display: none;
+} */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: grey;
+    font-size: 1rem;
+    background: beige;
+    margin-top: 3rem;
+    border-top: 1px solid #e0e7ff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 612px)
+{
+    .title {
+        text-align: center;
+    }
+
+    .score {
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+
+    .options {
+        width: 100vw;
+    }
+}
