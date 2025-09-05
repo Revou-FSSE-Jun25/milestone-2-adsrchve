@@ -2,6 +2,8 @@ const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
+let pairsFound = 0;
+const totalPairs = 6;
 let firstCard, secondCard;
 
 function flipCard() {
@@ -25,6 +27,10 @@ function flipCard() {
 function checkforMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
+        
+        pairsFound++;
+        document.getElementById("pairsFound").textContent = `Pairs found: ${pairsFound}`;
+        document.getElementById("pairsLeft").textContent = `Pairs left: ${totalPairs - pairsFound}`;
         return;
     }
 

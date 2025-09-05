@@ -89,17 +89,19 @@ h3 {
     color: #1C7CCC;
 }
 
-
-
 /* Navigation Bar */
 nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
     justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding-bottom: 1rem;
     overflow: hidden;
     flex-wrap: wrap;
+    z-index: 1000;
 }
 
 nav a {
@@ -223,73 +225,78 @@ nav a:hover {
 
 /* Rock Paper Scissors Game */
 .game {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.game h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1.5rem;
 }
 
 .title {
-    position: absolute;
-    top: 0;
-    font-size: 4rem;
-    z-index: 2;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .score {
-    display: flex;
-    width: 30vw;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 70px;
-    z-index: 1;
+  display: flex;
+  width: 30vw;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
-.p-count, .c-count {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.p-count,
+.c-count {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 .options {
-    display: flex;
-    width: 50vw;
-    justify-content: space-evenly;
-    margin-top: 2rem;
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+  margin-top: 2rem;
 }
 
-.rock, .paper, .scissors {
-    padding: 0.8rem;
-    width: 100px;
-    border-radius: 10px;
-    background: green;
-    outline: none;
-    border-color: green;
-    border: none;
-    cursor: pointer;
+.rock,
+.paper,
+.scissors {
+  padding: 0.8rem;
+  width: 100px;
+  border-radius: 10px;
+  background: green;
+  outline: none;
+  border-color: green;
+  border: none;
+  cursor: pointer;
 }
 
 .move {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .reload {
-    display: none;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: green;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: green;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .result {
-    margin-top: 20px;
-    font-size: 1.2rem;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 
@@ -337,34 +344,136 @@ nav a:hover {
     transform: rotateY(180deg);
 }
 
-
-/* Number Guessing Game
-.guess-span {
-    padding: 0.5rem 1rem;
-    background-color: beige;
-    color: gray;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
+/* Number Guessing Game */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
-.feedback-success {
-    background-color: limegreen;
+
+.card-container {
+    background-color: #091a32;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 28rem;
+    width: 100%;
+}
+
+.input-section {
+    margin-bottom: 1.5rem;
+}
+
+.input-section label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#guessInput {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+#guessInput:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+#submitBtn {
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+#submitBtn, #resetBtn {
+    padding: 0.5rem 1.5rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#submitBtn:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+#resetBtn {
+    padding: 0.75rem 2rem;
+    background-color: #22c55e;
+    box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent,
+        0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+#resetBtn:hover {
+    background-color: #16a34a;
+    transform: scale(1.05);
+}
+
+.feedback {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.attempts-counter {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.attempts-counter p {
+    color: white;
+}
+
+.attempts-counter span {
+    font-weight: 700;
     color: green;
 }
-.feedback-error {
-    background-color: pink;
-    color: red;
+
+.previous-guesses {
+    margin-bottom: 1.5rem;
 }
-.feedback-high {
-    background-color: yellowgreen;
-    color: yellow;
+
+.previous-guesses .small-text {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
 }
-.feedback-low, .feedback-info {
-    background-color: lightblue;
-    color: blue;
+
+.guess-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
+
+.game-over {
+    text-align: center;
+}
+
+.game-over #gameOverMessage {
+    margin-bottom: 1.5rem;
+}
+
 .hidden {
     display: none;
-} */
+}
 
 /* Footer */
 footer {
