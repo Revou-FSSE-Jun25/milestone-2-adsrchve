@@ -7,21 +7,27 @@
     <meta name="author" content="Anindya Nitisara Dwi Sukmawati">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RevGame</title>
+    <title>RevoFun | Mini Games Collection</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="" href="">
+    <!-- <link rel="icon" type="" href=""> -->
 </head>
 <body>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
     <!-- Navigation -->
     <header>
-        <h1>RevGame</h1>
-        <nav class="navigation">
-            <a href="#home">Home</a>
-            <a href="#games">Games</a>
-            <a href="#leaderboard">Leaderboard</a>
-            <a href="#profiles">Profiles</a>
-            <a href="#aboutus">About</a>
+        <nav>
+            <h1>RevoFun</h1>
+            <div class="navigation">
+                <a href="#home">Home</a>
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+            </div>
         </nav>
     </header>
 
@@ -30,7 +36,8 @@
         <!-- Home Page -->
         <section id="home">
             <h2>Welcome to RevoFun</h2>
-            <p>This is your collection of fun mini-games built with HTML, CSS, and JavaScript</p>
+            <p>This is your collection of fun mini-games you can play right in your browser!
+               From guessing numbers, battling it out in rock–paper–scissors, to testing your memory with matching cards, our games are quick, simple, and endlessly entertaining.</p>
         </section>
 
         <!-- Game Pages -->
@@ -38,34 +45,42 @@
             <h2>Our Games Collection</h2>
             <div class="games-grid">
                 <div class="game-card">
+                    <img src="assets/img/number-guessing.jpg" alt="Number Guessing Game">
                     <h3>Number Guessing</h3>
-                    <p>Try to guess the secret number in limited attempts!</p>
+                    <p>Try to guess the secret number in limited attempts!</p><br>
                     <a href="game-pages/number-guessing.html" class="btn">Play</a>
                 </div>
 
                 <div class="game-card">
+                    <img src="assets/img/rock-paper-scissors.jpg" alt="Rock Paper Scissors Game">
                     <h3>Rock Paper Scissors</h3>
-                    <p>Classic battle against the computer. Who wins?</p>
+                    <p>Classic battle against the computer. Who wins?</p><br>
                     <a href="game-pages/rock-paper-scissors.html" class="btn">Play</a>
                 </div>
                 
                 <div class="game-card">
+                    <img src="assets/img/memory-card.jpg" alt="Memory Card Game">
                     <h3>Memory Card</h3>
-                    <p>Match all the pairs with the least moves possible.</p>
+                    <p>Match all the pairs with the least moves possible.</p><br>
                     <a href="game-pages/memory-card.html" class="btn">Play</a>
                 </div>
             </div>
         </section>
 
-        <!-- Leaderboard & User Profiles
-        <section id="leaderboard">
-
-        </section> -->
-
         <!-- About -->
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>GameVerse is a student-built project to explore front-end development using HTML, CSS, and Vanilla JavaScript. Our mission is to make learning fun through mini interactive games.</p>
+        <section id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p><b class="bold">RevoFun</b> is an interactive platform built with HTML, CSS, and JavaScript.
+                        At RevoFun, you can play a variety of mini-games, including <b class="bold">Number Guessing</b>, <b class="bold">Rock–Paper–Scissors</b>, and <b class="bold">Memory Card</b>.
+                        RevoFun not only give you a source of fun and entertainment, but also aims to help sharpen developers’ skills as a platform for creativity.</p>
+                </div>
+
+                <div class="about-image">
+                    <img src="assets/img/people.jpg" alt="About RevoFun">
+                </div>
+            </div>
         </section>
     </main>
 

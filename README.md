@@ -4,31 +4,24 @@
 [revofungames.com](revofungames.com)
 
 ## Overview
+RevoFun is 
 
 ## Games
 ### Number Guessing Game
 
 ### Rock, Paper, Scissors
 
-### Clicker
-
 ### Memory Card
-
-### Avoid the Falling Objects
-
 
 ## Features
 * Navigation Bar
 * Home Page
 * Game Pages
-* Leaderboards
-* User Profile
-
 
 ## Technologies Used
 * Microsoft Visual Studio Code
-* HTML5
-* CSS3
+* HTML
+* CSS
 * JavaScript
 * Github
 * Netlify

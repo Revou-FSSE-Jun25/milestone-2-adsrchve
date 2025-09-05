@@ -23,15 +23,12 @@ function flipCard() {
 }
 
 function checkforMatch() {
-    // if (firstCard.dataset.framework === secondCard.dataset.framework) {
-    //     disableCards();
-    //     return;
-    // }
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+        return;
+    }
 
-    // unflipCards();
-
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards;
+    unflipCards();
 }
 
 function disableCards() {
